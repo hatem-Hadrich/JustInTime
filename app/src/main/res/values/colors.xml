@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="main_color" type="color">#b71c1c</item>
+    <item name="red1" type="color">#c62828</item>
+    <item name="red2" type="color">#d32f2f</item>
+    <item name="red3" type="color">#e53935</item>
+    <item name="red4" type="color">#ef5350</item>
+    <item name="red5" type="color">#d50000</item>
+    <item name="white" type="color">#eeeeee</item>
+    <item name="primaryDark" type="color">#921616</item>
+    <item name="black" type="color">#000</item>
+    <color name="primary">#3f51b5</color>
+    <color name="primary_pressed">#303f9f</color>
+    <color name="ripple">#303f9f</color>
+    <color name="mdtp_accent_color">#d32f2f</color>
+    <color name="mdtp_accent_color_dark">#b71c1c</color>
+</resources>

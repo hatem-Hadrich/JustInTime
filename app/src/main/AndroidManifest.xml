@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.glid.justintime">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name">
+        <activity
+            android:name="com.glid.justintime.activity.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AccountsLight">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.glid.justintime.activity.AddCar"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.glid.justintime.activity.AddContact"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.Config"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.glid.justintime.activity.Settings"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.glid.justintime.activity.CarDetails"
+            android:theme="@style/AppTheme" />
+
+
+        <receiver
+            android:name="com.glid.justintime.services.InitReceiver"
+            android:process=":carmgt_process">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="com.glid.justintime.action.INIT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.glid.justintime.services.SchedulerReceiver"
+            android:process=":carmgt_process" />
+
+        <service
+            android:name="com.glid.justintime.services.AlertService"
+            android:process=":carmgt_process" />
+
+        <activity
+            android:name=".activity.AddProfils"
+            android:label="@string/title_activity_consumption_list"></activity>
+    </application>
+
+</manifest>
